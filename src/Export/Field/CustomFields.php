@@ -63,6 +63,8 @@ class CustomFields implements FieldInterface
 
     public function getValue(Entity $entity): string
     {
+        return '';
+
         $value = $this->getFieldValueAsArray($entity);
 
         return $value ? '|' . implode('|', $value) . '|' : '';
