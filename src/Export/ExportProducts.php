@@ -23,7 +23,7 @@ class ExportProducts implements ExportInterface
         $this->customAssociations = $customAssociations;
     }
 
-    public function getByContext(SalesChannelContext $context, int $batchSize = 10): iterable
+    public function getByContext(SalesChannelContext $context, int $batchSize = 1): iterable
     {
         $criteria = $this->getCriteria($batchSize);
         $products = $this->productRepository->search($criteria, $context);
